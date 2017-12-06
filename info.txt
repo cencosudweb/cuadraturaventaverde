@@ -1,0 +1,89 @@
+El programa se esta ejecutando...
+[Ini Metodo eliminarTablaRev3Pojob]
+Registros agrados HORARIO_VTAV_ACT: 1
+[Fin Metodo eliminarTablaRev3Pojob]
+[Ini Metodo eliminarTablaRev3Pojob]
+Registros agregADOS HORARIO_VTAV_ACT_STOCK: 1
+[Fin Metodo eliminarTablaRev3Pojob]
+[Ini Metodo eliminarTablaRev3]
+Tabla eliminada de BJPROYEC.Q_VALPS1: 0
+[Fin Metodo eliminarTablaRev3]
+[Ini Metodo crearTablaRev3]
+Tabla Creada BJPROYEC.Q_VALPS1: 1471
+[Fin Metodo crearTabla Q_VALPS1]
+[Ini Metodo eliminarTablaQ_VALPS1]
+Registros eliminados donde campo POJOB ES =  'PO_CANCEL' de BJPROYEC.Q_40REV3: 0
+[Fin Metodo eliminarTablaQ_VALPS1]
+[Ini Metodo eliminarRev3NotExistInPomhdr]
+Registros eliminados donde no existen en la tabla mmsp4lib.pomhdr  de BJPROYEC.Q_40REV3: 12
+[Fin Metodo eliminarRev3NotExistInPomhdr]
+[Ini Metodo eliminarRev3NotExistInPomhdrPostat]
+Registros eliminados donde no existen en la tabla mmsp4lib.pomhdr y b.postat <> '3' de BJPROYEC.Q_40REV3: 21
+[Fin Metodo eliminarRev3NotExistInPomhdrPostat]
+[Ini Metodo eliminarRev3NotExistInExiff]
+Registros eliminados donde no existen en la tabla exisbugd.exiff40cl2 de BJPROYEC.Q_40REV3: 64
+[Fin Metodo eliminarRev3NotExistInExiff]
+[Ini Metodo eliminarTablaRevb]
+Tabla eliminada de BJPROYEC.Q_40REV3: 0
+[Fin Metodo eliminarTablaRevb]
+[Ini Metodo crearTablaRevb]
+Crear Tabla de bjproyec.Q40REVb: 1374
+[Fin Metodo crearTablaRevb]
+[Ini Metodo alterarTablaRevbDespacho]
+Alterar Tabla y agregar columna DESPA con caracter de 3 de BJPROYEC.Q40REVb: 0
+[Fin Metodo alterarTablaRevbDespacho]
+[Ini Metodo alterarTablaRevbNumdo]
+Alterar Tabla agregar columna NUMDO con caracter de 20 de BJPROYEC.Q40REVb: 0
+[Fin Metodo alterarTablaRevbNumdo]
+[Ini Metodo actualizarTablaRevbDespacho]
+Actualizar  Tabla y establecer campo DESPA de bjproyec.Q40REVb: 1093
+[Fin Metodo actualizarTablaRevbDespacho]
+[Ini Metodo actualizarTablaRevbNumdo]
+Actualizar  Tabla y establecer campo NUMDO de bjproyec.Q40REVb: 1093
+[Fin Metodo actualizarTablaRevbNumdo]
+Sql sbJda: SELECT A.PONUMB , A.POVNUM, CASE WHEN A.NUMDO = '' OR A.NUMDO IS NULL THEN  '-1' ELSE A.NUMDO END as NUMDO, A.POFECE, A.POHORE, A.EX14ERROR, A.EX14FREGi, A.DESPA FROM bjproyec.Q_VALPS2 A
+[Ini Metodo eliminarTablaRev3Pojob]
+Registros eliminados donde campo POJOB ES =  'PO_CANCEL' de BJPROYEC.Q_40REV3: 3946
+[Fin Metodo eliminarTablaRev3Pojob]
+Sql sbEom: SELECT  PO.tc_purchase_orders_id  as SolicitudOriginal,O.tc_order_id as N_Orden_Distribu,o.Purchase_Order_id as Solicitud,TO_CHAR(O.created_dttm, 'YYYY-MM-DD HH24:MI:SS.FF') AS Fecha_Creacion_Orden,o.O_FACILITY_ALIAS_ID as Origen, CASE WHEN o.Is_Cancelled = 1 THEN 'Cancelado' ELSE 'No Cancelado' END    as Cancelado FROM CA14.orders o INNER JOIN CA14.Purchase_Orders PO ON O.Purchase_Order_Id = Po.Purchase_Orders_Id LEFT JOIN  CA14.order_type ot ON ot.order_type_id =  po.order_category  WHERE o.o_facility_alias_id  NOT IN ('012', '200', '400') AND (ot.order_type <> 'Pickup') AND O.created_dttm >= to_date('19-11-2017 00:00:01','DD-MM-YYYY HH24:MI:SS') AND O.created_dttm <= to_date('20-11-2017 23:59:59','DD-MM-YYYY HH24:MI:SS')
+[Ini Metodo eliminarTablaRev3]
+Tabla eliminada de BJPROYEC.Q_VALPS1: 0
+[Fin Metodo eliminarTablaRev3]
+[Ini Metodo crearTablaRev3]
+Tabla Creada BJPROYEC.Q_VALPS1: 1471
+[Fin Metodo crearTabla Q_VALPS1]
+[Ini Metodo eliminarTablaQ_VALPS1]
+Registros eliminados donde campo POJOB ES =  'PO_CANCEL' de BJPROYEC.Q_40REV3: 0
+[Fin Metodo eliminarTablaQ_VALPS1]
+[Ini Metodo eliminarRev3NotExistInPomhdr]
+Registros eliminados donde no existen en la tabla mmsp4lib.pomhdr  de BJPROYEC.Q_40REV3: 12
+[Fin Metodo eliminarRev3NotExistInPomhdr]
+[Ini Metodo eliminarRev3NotExistInPomhdrPostat]
+Registros eliminados donde no existen en la tabla mmsp4lib.pomhdr y b.postat <> '3' de BJPROYEC.Q_40REV3: 21
+[Fin Metodo eliminarRev3NotExistInPomhdrPostat]
+[Ini Metodo eliminarRev3NotExistInExiff]
+Registros eliminados donde no existen en la tabla exisbugd.exiff40cl2 de BJPROYEC.Q_40REV3: 64
+[Fin Metodo eliminarRev3NotExistInExiff]
+[Ini Metodo eliminarTablaRevb]
+Tabla eliminada de BJPROYEC.Q_40REV3: 0
+[Fin Metodo eliminarTablaRevb]
+[Ini Metodo crearTablaRevb]
+Crear Tabla de bjproyec.Q40REVb: 1374
+[Fin Metodo crearTablaRevb]
+[Ini Metodo alterarTablaRevbDespacho]
+Alterar Tabla y agregar columna DESPA con caracter de 3 de BJPROYEC.Q40REVb: 0
+[Fin Metodo alterarTablaRevbDespacho]
+[Ini Metodo alterarTablaRevbNumdo]
+Alterar Tabla agregar columna NUMDO con caracter de 20 de BJPROYEC.Q40REVb: 0
+[Fin Metodo alterarTablaRevbNumdo]
+[Ini Metodo actualizarTablaRevbDespacho]
+Actualizar  Tabla y establecer campo DESPA de bjproyec.Q40REVb: 1093
+[Fin Metodo actualizarTablaRevbDespacho]
+[Ini Metodo actualizarTablaRevbNumdo]
+Actualizar  Tabla y establecer campo NUMDO de bjproyec.Q40REVb: 1093
+[Fin Metodo actualizarTablaRevbNumdo]
+[Ini Metodo eliminarTablaRev3Pojob]
+Registros actualizados  HORARIO_VTAV_ACT_STOCK 3945
+[Fin Metodo eliminarTablaRev3Pojob]
+Archivos creados.
+El programa finalizo.
